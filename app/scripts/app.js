@@ -11,21 +11,28 @@
 angular
   .module('pvcApp', [
     'ngResource',
-    'ngRoute'
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+    .state({
+        name: 'app',
+        url: '/app',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
+        controller: 'MainCtrl'
+    })
+    .state({
+        name: 'about',
+        url: '/about',
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+        controller: 'AboutCtrl'
+    })
+    .state({
+        name: 'contact',
+        url: '/contact',
+        template: '<p>This is the contact view.</p>'
+    });
+    
+    $urlRouterProvider.otherwise('/app');
+    
   });
