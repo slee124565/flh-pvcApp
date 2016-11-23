@@ -31,13 +31,13 @@ angular
         name: 'contact',
         url: '/contact',
         template: '<p>This is the contact view.</p>'
+    })
+    .state({
+        name: 'user',
+        url: '/user',
+        template: 'views/user.html'
     });
     
-    .when('/user', {
-      templateUrl: 'views/user.html',
-      controller: 'UserCtrl',
-      controllerAs: 'user'
-    })
     $urlRouterProvider.otherwise('/app');
     
   });
