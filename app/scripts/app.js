@@ -35,7 +35,7 @@ angular
     .state({
         name: 'user',
         url: '/user',
-        template: 'views/user.html'
+        templateUrl: 'views/user.html'
     });
     
     $urlRouterProvider.otherwise('/app');
