@@ -15,22 +15,24 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-    .state('app',{
-        url: '/',
+    .state({
+        name: 'app',
+        url: '/app',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        ControllerAs: 'main'
+        controller: 'MainCtrl'
     })
-    .state('app.about', {
-        url: 'about',
+    .state({
+        name: 'about',
+        url: '/about',
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'AboutCtrl'
     })
-    .state('app.contact',{
-        url: 'contact',
-        template: 'TODO'
+    .state({
+        name: 'contact',
+        url: '/contact',
+        template: '<p>This is the contact view.</p>'
     });
-    $urlRouterProvider.otherwise('/');
+    
+    $urlRouterProvider.otherwise('/app');
     
   });
