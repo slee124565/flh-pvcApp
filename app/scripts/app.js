@@ -33,6 +33,11 @@ angular
         template: '<p>This is the contact view.</p>'
     });
     
+    .when('/user', {
+      templateUrl: 'views/user.html',
+      controller: 'UserCtrl',
+      controllerAs: 'user'
+    })
     $urlRouterProvider.otherwise('/app');
     
   });
