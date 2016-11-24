@@ -31,6 +31,11 @@ angular
         name: 'contact',
         url: '/contact',
         template: '<p>This is the contact view.</p>'
+    })
+    .state({
+        name: 'user',
+        url: '/user',
+        templateUrl: 'views/user.html'
     });
     
     $urlRouterProvider.otherwise('/app');
