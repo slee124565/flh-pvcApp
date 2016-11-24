@@ -12,54 +12,136 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style_totomo.css">
     <!-- endbuild -->
   </head>
   <body ng-app="pvcApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+      
+    <div id="wrapper">
+        <!-- add header here -->
+        <header id="masthead" class="site-header" role="banner">
+            <div class="top-bar container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navigation">
+                        <span class="icon-bars">Toggle navigation</span>
+                    </button>
+                </div>
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+                <div class="site-branding title-area">
+                    <h1 id="logo" class="site-title">
+                    <a href="#" title="太陽能發電系統">太陽能發電系統</a>				</h1>
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+                    <div class="site-description" itemprop="description">台北市承德路三段90巷測試中
+                    </div>			
+                </div>
+                <div class="header-search right">
+                    <a href="#" class="search-toggler">
+                    <span><i class="fa fa-search"></i></span>
+                    </a>
+                </div>
+                <nav id="site-navigation" class="site-navigation pull-right">
+                    <div id="navbar-collapse" class="navbar-collapse">
+                        <ul id="navigation" class="nav navbar-nav navbar-right">
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </div>			
+                </nav>
+            </div>
+        </header><!-- #masthead -->
+                
+        <!-- add main content here -->
+        <div id="content" class="site-content container">
+        <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            
+            <article class="post-5 page type-page status-publish hentry">
+                <header class="entry-header">
+                  <h1 class="entry-title">再生能源 &#8211; 太陽能即時發電狀況</h1>	
+                </header><!-- .entry-header -->
+                
+                <div class="entry-content">
 
-            <a class="navbar-brand" href="#/">pvc</a>
-          </div>
+                    <div class="well">
+                        <table class="table">
+                            <caption><strong>統計報告</strong></caption>
+                            <thead>
+                                <tr><th></th><th>今日</th>
+                                <th>本月</th>
+                                <th>總計</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th>發電量(度)</th>
+                                    <td>2.67</td>
+                                    <td>207.7</td>
+                                    <td>6,736</td></tr>
+                                <tr><th>減碳量(公斤)</th>
+                                    <td>1.70</td>
+                                    <td>132.3</td>
+                                    <td>4,291</td></tr>
+                                <tr><th>收益(台幣)</th>
+                                    <td>18.33</td>
+                                    <td>1,425.4</td>
+                                    <td>46,231</td></tr>
+                            </tbody>
+                        </table>
+                    </div><!-- .well -->
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    <div class="well">
+                        <caption><strong>每小時發電量</strong></caption>
+                        <div id="amchart1" style="width: 100%; height: 300px;"></div>        
+                    </div> <!-- .well -->
+                    
+                    
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table">
+                                    <tr ><th class="text-center" colspan="3">目前輸出</th></tr>
+                                    <tr><th>電壓</th><td>233</td><th>V</th></tr>
+                                    <tr><th>電流</th><td>6.21</td><th>A</th></tr>
+                                    <tr><th>功率</th><td>1437</td><th>W</th></tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table">
+                                    <tr><th class="text-center" colspan="3">現場環境</th></tr>
+                                    <tr><th>紫外線指數</th><td>1</td><th></th></tr>
+                                    <tr><th>溫度</th><td>18.9</td><th>C</th></tr>
+                                    <tr><th>能見度</th><td>16.1</td><th>Km</th></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div><!-- .well -->
+                    
+                    
+                </div><!-- .entry-content -->
+                
+                <footer class="entry-footer">
+                </footer><!-- .entry-footer -->
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a ui-sref="app">Home</a></li>
-              <li><a ui-sref="about">About</a></li>
-              <li><a ui-sref="contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+            </article>
 
-    <div class="container">
-    <ui-view></ui-view>
-    </div>
+        </main><!-- #main -->
+        </div><!-- #primary -->
+        </div><!-- #content -->
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+        <footer id="colophon" class="site-footer container" role="contentinfo">
+            <div class="credit">
+                <a href="#" title="Semantic Personal Publishing Platform" target="_blank">Proudly powered by WordPress</a>.
+            </div>
+            <div class="divider-half"></div>
+        </footer><!-- #colophon -->
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    </div> <!-- #wrapper -->
+      
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -69,7 +151,8 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
+    -->
+      
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
