@@ -33,11 +33,12 @@ angular
         template: '<p>This is the contact view.</p>'
     })
     .state({
-        name: 'user',
-        url: '/user',
-        templateUrl: 'views/user.html'
+        name: 'userSite',
+        url: '/userSite',
+        templateUrl: 'views/usersite.html',
+        controller: 'UsersiteCtrl'
     });
     
-    $urlRouterProvider.otherwise('/app');
+    $urlRouterProvider.otherwise('/userSite');
     
   });
