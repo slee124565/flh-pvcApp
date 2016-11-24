@@ -9,10 +9,7 @@
                     </button>
                 </div>
 
-                <div class="site-branding title-area"
-                     ng-init="
-                              siteTitle = '太陽能發電系統';
-                              ">
+                <div class="site-branding title-area">
                     <h1 id="logo" class="site-title">
                     <a href="#">{{site.title}}</a>
                     </h1>
@@ -42,14 +39,14 @@
             
             <article class="post-5 page type-page status-publish hentry">
                 <header class="entry-header">
-                  <h1 class="entry-title">{{siteContentTitle}}</h1>	
+                  <h1 class="entry-title">{{site.content.title}}</h1>	
                 </header><!-- .entry-header -->
                 
                 <div class="entry-content">
 
                     <div class="well">
+                        <caption><strong>統計報告</strong></caption>
                         <table class="table">
-                            <caption><strong>統計報告</strong></caption>
                             <thead>
                                 <tr><th></th><th>今日</th>
                                 <th>本月</th>
@@ -73,7 +70,7 @@
                     </div><!-- .well -->
 
                     <div class="well">
-                        <caption><strong>每小時發電量</strong></caption>
+                        <caption><strong>{{site.content.amchart.title}}</strong></caption>
                         <div id="amchart1" style="width: 100%; height: 300px;"></div>        
                     </div> <!-- .well -->
                     
