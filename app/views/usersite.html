@@ -70,8 +70,28 @@
                     </div><!-- .well -->
 
                     <div class="well">
-                        <caption><strong>{{site.content.amchart.title}}</strong></caption>
-                        <div id="amchart1" style="width: 100%; height: 300px;"></div>        
+                        <div>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                            <li role="presentation" class="active"><a href="#engHourly" aria-controls="engHourly" role="tab" data-toggle="tab">Hourly</a></li>
+                            <li role="presentation"><a href="#engDaily" aria-controls="engDaily" role="tab" data-toggle="tab">Daily</a></li>
+                            <li role="presentation"><a href="#engMonthly" aria-controls="engMonthly" role="tab" data-toggle="tab">Monthly</a></li>
+                            <li role="presentation"><a href="#engYearly" aria-controls="engYearly" role="tab" data-toggle="tab">Yearly</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <!--
+                                <div role="tabpanel" class="tab-pane active" id="engHourly">...</div>
+                                <div role="tabpanel" class="tab-pane" id="engDaily">...</div>
+                                <div role="tabpanel" class="tab-pane" id="engMonthly">...</div>
+                                <div role="tabpanel" class="tab-pane" id="engYearly">...</div>
+                                -->
+                                <div id="amchart1" style="width: 100%; height: 300px;"></div>  
+
+                            </div>
+                        </div>
+                        
                     </div> <!-- .well -->
                     
                     
